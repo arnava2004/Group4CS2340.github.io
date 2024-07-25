@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>CS 2340 Group 4 Project</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+      <!-- Intro -->
+      <div id="intro">
+        <h1>
+          <br />
+          HealthTrack
+        </h1>
+        <p>
+          <a href="https://twitter.com/ajlkn">@ajlkn</a> for
+          <a href="https://html5up.net">HTML5 UP</a><br />
+          and released for free under the
+          <a href="https://html5up.net/license">Creative Commons license</a>.
+        </p>
+        <ul class="actions">
+          <li>
+            <a
+              href="#header"
+              class="button icon solid solo fa-arrow-down scrolly"
+              >Continue</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Header -->
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links">
+          <li><a href="index.html">Main Page</a></li>
+          <li><a href="generic.html">Patterns and Designs</a></li>
+          <li><a href="contributors.html">Contributors</a></li>
+          <li><a href="elements.html">Elements</a></li>
+          <li class="active"><a href="designarchitecture.html">Design & Architecture</a></li>
+        </ul>
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon brands fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <h2>Design & Architecture</h2>
+
+        <!-- Sprint 1 -->
+        <article class="post featured">
+          <header class="major">
+            <h3>Sprint 1</h3>
+          </header>
+
+          <div align="left">
+            <h3>Domain Model Diagram</h3>
+          </div>
+          <img src="images/diagrams/sprint1/domainmodeldiagram.jpg" alt="" width="100%" height="100%"/>
+          <p>
+            This domain model diagram was created to map
+            out the different classes our group planned to create. It also
+            helped us plan out how the classes would interact with each other.
+            Moreover, all of these classes were implemented in our codebase as
+            User, CaloriesViewModel, CommunityViewModel, WorkoutViewModel, etc.
+            We decided to remove and add various attributes compared to the ones in
+            the domain model but the diagram served as a good starting point for our project.
+          </p>
+
+          <div align="left">
+            <h3>Usecase Diagram</h3>
+          </div>
+          <img src="images/diagrams/sprint1/usecasediagram.jpg" alt="" width="100%" height="100%"/>
+          <p>
+            This use case diagram was created to map out the different primary, supporting, and 
+            offstage actors that are a part of the HealthTracker mobile application we planned to create.
+            We also created different functional requirements to show the different ways the primary and supporting
+            actors would potentially use our app. Moreover, we implemented all the functionality described with the creation of
+            a sign up screen that allows users to create an account, a calories screen that allows users and 
+            international sustainable doctors to calculate the user's daily calorie goal, etc. The diagram was a useful tool
+            to plan out the User class and what instance variables would need to be created.
+          </p>
+        </article>
+
+        <!-- Sprint 2 -->
+        <article class="post featured">
+          <header class="major">
+            <h3>Sprint 2</h3>
+          </header>
+
+          <div align="left">
+            <h3>Domain Model Diagram</h3>
+          </div>
+          <img src="images/diagrams/sprint2/domainmodeldiagram.jpg" alt="" width="100%" height="100%"/>
+          <p>
+            This domain model diagram is a revised version of the one created in Sprint 1. This new domain model
+            diagram is one that includes the addition of a Workout Database class. This new diagram is more based on
+            the actual implementation done in the codebase rather than theoretical needs. Moreover, the diagram is better at showing
+            our current structure of our project and what changes may be needed to improve it. The continuous need to use the User class
+            incentivised the conversion of the User class to use the singleton design pattern. 
+          </p>
+
+          <div align="left">
+            <h3>Sequence Diagram</h3>
+          </div>
+          <img src="images/diagrams/sprint2/sequencediagram.jpg" alt="" width="100%" height="100%"/>
+          <p>
+            This sequence diagram was created to map out the use case of a app user trying
+            to add his or her weight, height, and gender to the database using the PersonalInformationFragment,
+            PersonalInformationViewModel, User classes. The sequence diagram also helped to show error checking
+            where fields are not filled out and thus the process is not successful. Likewise, the classes and methods described
+            were implemented with methods like addPersonalData with takes in the user's name, weight, height, and gender.
+            The update method in the diagram was renamed as the updateDocument method in the codebase which has the same functionality.
+          </p>
+
+        </article>
+
+        <!-- Sprint 3 -->
+        <article class="post featured">
+          <header class="major">
+            <h3>Sprint 3</h3>
+          </header>
+
+          <div align="left">
+            <h3>Domain Model Diagram</h3>
+          </div>
+          <img src="images/diagrams/sprint3/domainclassdiagram.jpg" alt="" width="100%" height="100%"/>
+          <img src="images/diagrams/sprint3/domainclassdiagram2.jpg" alt="" width="100%" height="100%"/>
+          <p>
+            This domain class diagram was created to plan out the use of the strategy design pattern to implement
+            functionality of the search bar. The WorkoutPlanNameSearchStartegy class and WorkoutPlanAuthorSearchStartegy class
+            were created to search for workout plan names and author names respectively. These classes were implemented in the codebase
+            with similiar methods and the same functionality. Moreover, the strategy interface in the diagram was also implemented 
+            in the codebase. This strategy design pattern allows the user to determine the search bar's functionality on runtime.
+          </p>
+
+        </article>
+      </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
